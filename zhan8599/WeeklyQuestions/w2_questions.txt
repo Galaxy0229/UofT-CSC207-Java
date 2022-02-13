@@ -1,0 +1,88 @@
+Week 2 Questions:
+
++ From last week:
+1. What is a "constructor", "instance variable", "class variable", and "method"?
+ - constructor: creates an instance of a class
+ - instance variable: a variable that has a different value for different different instances
+ - class variable: the variable shared with all objects
+
+2. Give two differences between primitive and reference variables.
+ - primitive variables store values but reference variables store the addresses
+ - we could use "==" to compare primitive variables but we need to use equals method to compare reference variables
+
+3. Where does the Java Virtual Machine (JVM) store variables with the keyword "static" in their declaration?
+ - separate from the instance of that class
+
++ More Java:
+
+4. What are "autoboxing", "unboxing", "Wrapper" class?
+ - autoboxing: when Java creates an instance of the rapper class for a primitive variable to wrap
+ - unboxing: when Java treats an object like its primitive value
+int x=2;  
+Integer y = new Integer(2);  
+System.out.println(x ==y); //unboxes the y variable to compare their values.  
+  
+ - Wrapper class: the object version of a primitives.
+
+5. When are the equals method and the == operator the same? When are they different?
+ - Object o == new Object();  
+o.equals behaves the same as ==  
+
+6. What do the accessibility modifiers mean?
++ public = every class has access  
++ private = can only be accessed inside that particular class (between { })  
++ protected = package protected and also subclass have access (example, many things in the java.lang)  
++ package protected = only classes in the same package have access (default)
+
+7. What is the difference between "static" and "instance"?
+- Static can be called without creating an instance of an object.  
+Instance method are called through an instance of the object.  
+instance variables can have different values in each of the objects.   
+Static variable have only one value for all instance of the object. 
+
+8. Why is it a good idea to have instance variables be private with public getter and setter methods?
+ - people cannot accidentally change of variable value without realizing it. We must call a setter to do so. One of the reason is for readability and for all other people working with your code.
+
+9. When do we use the keyword "this"?
+ - just like self in python
+
+10. What is the "default" constructor and when does a class get one?
+ - it's the empty constructor so it's the one that has no arguments, and it calls the super constructor with no arguments
+ - You only get one if you forget to put in your own constructor so as soon as you put a constructor in a class it no longer gets the default constructor.
+
+11. What is the difference between overriding and overloading?
+ - Overloading: you have two methods of different signatures in the same class
+ - Overriding: where you have two methods with the same signature in a superclass and subclass that's called overriding
+
+12. What is the Java lookup rule for:
+instance methods: override
+instance variables: shadow
+static methods: shadow
+static variables: shadow
+
+13. When do the Java lookup rules apply?
+- if you have an instance method you override you use the one from the subclass if you have a static
+method you use the one from the parent class that's what shadow means it means look up so you're
+shadowing for absolutely everything except instance methods.
+
+14. How does inheritance work in Java? How is it connected to "the super constructor"?
+- inheritance works by creating these nice big sort of compound objects, so one memory address
+ is allocated for all of these different objects and all of the different objects are connected
+ to the same.
+
+15. What are we discussing specifically, when we talk about the Java memory model?
+ - whether or not two variables point at the same memory address or different memory addresses like aliases
+
+16. What is casting? Why do we try not to use "()" to do casting?
+ - when you are temporarily change the type of a variable
+
+17. What does it mean for Class A to be dependent on Class B?
+
+
++ Git:
+
+18. Before you start working, why should you do a "git pull"?
+
+19. After you start working, why is it important to add and commit before pulling or pushing?
+
+20. How do you resolve a conflict manually?
